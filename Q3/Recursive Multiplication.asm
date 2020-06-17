@@ -27,7 +27,7 @@ j mcDone
 
 mrContinue:
 beqz $a1, mrZero
-addi $a1, $a1 -1 #Subtract 1 from y
+addi $a1, $a1, -1 #Subtract 1 from y
 add $s0, $s0, $a0 #Add x
 jal multiply_recur
 add $s0, $s0, $v0
@@ -52,8 +52,8 @@ jr $ra
 #############################
 
 main:
-li $a0, 100
-li $a1, 100
+li $a0, 4
+li $a1, 5
 jal multiply_recur
 move $a0, $v0
 
